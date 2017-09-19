@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>test</title>
+	<link rel="stylesheet" href="">
+	<script>
+		window.onload = function () {
+			var btns = document.getElementsByTagName('button');
+			for (var i = 0; i < btns.length; i++) {
+				btns[i].i = i;
+				btns[i].onclick = function () {
+					alert(this.i);//闭包
+				}
+			}
+			var img = document.getElementsByTagName('div')[0];
+			// img.scrollLeft = 150;
+		}
+	</script>
+	<style type="text/css">
+		#b1{
+			background-color: red;
+			width: 300px;
+			height: 900px;
+			position: absolute;
+			top: 400px;
+			left: 10px;
+		}
+		#b2{
+			background-color: blue;
+			width: 75%;
+			height: 1000px;
+			margin-left: 450px;
+		}
+	</style>
+</head>
+<body>
+	<button>按钮1</button>
+	<button>按钮2</button>
+	<button>按钮3</button>
+	<div style="width: 200px;height: 200px;overflow: hidden;">
+		<img src="images/2.jpg">
+	</div>
+	<div id="b1"></div>
+	<div id="b2"></div>
+</body>
+</html>
